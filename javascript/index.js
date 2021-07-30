@@ -10,7 +10,11 @@ async function fetchText() {
 
         let prix = elemTab.price;
 
-        let img = elemTab.imageUrl
+        let img = elemTab.imageUrl;
+        let id = elemTab._id;
+        console.log(id);
+        console.log(elemTab);
+
         elem.innerHTML += `
         <div class="col pb-3 ">
           <div class="card">
@@ -18,7 +22,7 @@ async function fetchText() {
               <div class="card-body text-center">
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text"> ${prix}€</p>
-                <a href="#" class="btn btn-primary">Acheter</a>
+                <a href="produit.html?id=${id}" class="btn btn-primary">Voir</a>
               </div>
           </div>
         </div>
