@@ -17,11 +17,13 @@ async function fetchText() {
         <div class="card-body text-center">
           <h5 class="card-title">${description}</h5>
           <p class="card-text"> ${prix}€</p>
-          <a href="produit.html?id=${id}" class="btn btn-primary">acheter</a>
+          <a href="panier.html" class="btn btn-primary" id="ajoutPanier">acheter</a>
         </div>
     </div>
   </div>`
 }
+
+
 
 window.addEventListener('load', async function () {
   await fetchText();

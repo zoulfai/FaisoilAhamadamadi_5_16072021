@@ -3,7 +3,7 @@ async function fetchText() {
     let data = await response.json();
     let elem = document.getElementById('carte');
     elem.innerHTML = '<h2 class="text-center">Le catalogue</h2><br/>';
-
+//boucle recuperation des elements
     for(let i = 0; i < data.length; i++) {
         let elemTab = data[i];
         let name = elemTab.name;
@@ -14,7 +14,7 @@ async function fetchText() {
         let id = elemTab._id;
         console.log(id);
         console.log(elemTab);
-
+//remplisage du html
         elem.innerHTML += `
         <div class="col pb-3 ">
           <div class="card">
