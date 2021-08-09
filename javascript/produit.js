@@ -17,13 +17,16 @@ async function fetchText() {
         <div class="card-body text-center">
           <h5 class="card-title">${description}</h5>
           <p class="card-text"> ${prix}€</p>
-          <a href="panier.html" class="btn btn-primary" id="ajoutPanier">acheter</a>
+          <button onclick="myFunction('${name}','${id}')" class="favorite styled" type="button">Ajouter au panier</button>
         </div>
     </div>
   </div>`
 }
 
-
+function myFunction(name,id){
+  alert(`A été ajouter ${name}`);
+  localStorage.setItem('id',id);
+}
 
 window.addEventListener('load', async function () {
   await fetchText();
