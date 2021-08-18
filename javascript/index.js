@@ -2,7 +2,7 @@ async function fetchText() {
     let response = await fetch('http://localhost:3000/api/teddies/');
     let data = await response.json();
     let elem = document.getElementById('carte');
-    elem.innerHTML = '<h2 class="text-center">Le catalogue</h2><br/>';
+    elem.innerHTML = '<h2 class="text-center">ours en peluche faits à la main</h2><br/>';
 //boucle recuperation des elements
     for(let i = 0; i < data.length; i++) {
         let elemTab = data[i];
@@ -16,7 +16,7 @@ async function fetchText() {
         console.log(elemTab);
 //remplisage du html
         elem.innerHTML += `
-        <div class="col pb-3 ">
+        <div class="col-sm-12 col-md-6 col-lg-6 pb-3 ">
           <div class="card">
             <img src="${img}" class="card-img-top" alt="ourson"> 
               <div class="card-body text-center">
