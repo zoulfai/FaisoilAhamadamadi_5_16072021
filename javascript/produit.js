@@ -22,7 +22,7 @@ async function fetchText() {
   elem1.innerHTML = ` <img src="${img}" class="card-img-top" alt="ourson">`;
   elem2.innerHTML = `<h5 class="card-title">${description}</h5>`;
   elem4.innerHTML = `<h5 class="card-title">${prix}$</h5>`;
-  elem5.innerHTML = `<button onclick="stockage('${name}','${id}','${prix}')" class="btn btn-primary" type="button">Ajouter au panier</button>`;
+  elem5.innerHTML = `<button onclick="stockage('${name}','${id}','${prix}','${img}')" class="btn btn-primary" type="button">Ajouter au panier</button>`;
   choixCouleur(ours);
 
 
@@ -45,7 +45,7 @@ let stockTab = []
 
 
 
-function stockage(name, id, prix) {
+function stockage(name, id, prix, img) {
 
   let oursTmp = localStorage.getItem('ours');
   console.log(oursTmp);
@@ -59,10 +59,11 @@ function stockage(name, id, prix) {
     name,
     id,
     prix,
+    img,
   }
     );
   alert(`A été ajouter ${name}`);
-  //stockTab.push(id, name, prix);
+  //stockTab.push(id, name, prix,img);
   localStorage.setItem('ours', JSON.stringify(oursObject));
   
 

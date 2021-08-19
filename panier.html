@@ -38,10 +38,75 @@
 		  </div>
 		</section>
 		 <!--CARTE panier--> 
-		 <section>
-			<p id="para"></p>
-			<button onclick="commande()" class="btn btn-primary" type="button">commander</button>
-		 </section>
+			<section class="mx-3">
+				<div class="d-flex justify-content-center">
+					<div class="card" style="width:20rem;">
+						<p id="oursName"></p>
+						<h5 id="total" class="text-center">Total de la commande : </h5>
+						<div id="cacheBouton" class="text-center">
+			<button class="btn btn-primary" type="button" id="passCommande">Passer la commande</button>
+			<!--onclick="commande()"-->
+		</div>
+					</div>
+				</div>
+		 </section> 
+		<!--FORMULAIRE-->
+		<div id="formulaire" class="d-none">	
+		<form class="my-3 mx-5 row g-3 needs-validation">
+			<div class="col-md-4">
+			  <label for="validationCustom01" class="form-label">Nom</label>
+			  <input type="text" class="form-control" id="validationCustom01" placeholder="John" pattern="[A-Za-z]{1,26}" required>
+			  <div class="valid-feedback">
+				Ok!
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <label for="validationCustom02" class="form-label">Prénom</label>
+			  <input type="text" class="form-control" id="validationCustom02" placeholder="Doe" pattern="[A-Za-z]{1,26}" required>
+			  <div class="valid-feedback">
+				Ok!
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <label for="validationCustomUsername" class="form-label">Adresse mail</label>
+			  <div class="input-group has-validation">
+				<span class="input-group-text" id="inputGroupPrepend">@</span>
+				<input type="email" class="form-control" id="validationCustomUsername" placeholder="john.doe@mail.com" aria-describedby="inputGroupPrepend" required>
+				<div class="invalid-feedback">
+				  Please choose a username.
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <label for="validationCustom03" class="form-label">Adresse</label>
+			  <input type="text" class="form-control" id="validationCustom03"pattern="[A-Za-z0-9 \.\-]{1,26}" placeholder="123 avenue des Ours" required>
+			  <div class="invalid-feedback">
+				Please provide a valid city.
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <label for="validationCustom05" class="form-label">Code postal</label>
+			  <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{5}" placeholder="98765" required>
+			  <div class="invalid-feedback">
+				Please provide a valid zip.
+			  </div>
+			</div>
+			<div class="col-12">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+				<label class="form-check-label" for="invalidCheck">
+				Valider votre achat
+				</label>
+				<div class="invalid-feedback">
+				  You must agree before submitting.
+				</div>
+			  </div>
+			</div>
+			<div class="col-12">
+			  <button class="btn btn-primary" type="submit">Commander</button>
+			</div>
+		  </form>
+		</div>
 
 		<!--FOOTER-->
 		 <!-- Footer -->
