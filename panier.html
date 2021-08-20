@@ -54,39 +54,39 @@
 		<div id="formulaire" class="d-none">	
 		<form class="my-3 mx-5 row g-3 needs-validation">
 			<div class="col-md-4">
-			  <label for="validationCustom01" class="form-label">Nom</label>
-			  <input type="text" class="form-control" id="validationCustom01" placeholder="John" pattern="[A-Za-z]{1,26}" required>
+			  <label for="nom" class="form-label">Nom</label>
+			  <input type="text" class="form-control" id="nom" placeholder="John" pattern="[A-Za-z]{1,26}" required>
 			  <div class="valid-feedback">
 				Ok!
 			  </div>
 			</div>
 			<div class="col-md-4">
-			  <label for="validationCustom02" class="form-label">Prénom</label>
-			  <input type="text" class="form-control" id="validationCustom02" placeholder="Doe" pattern="[A-Za-z]{1,26}" required>
+			  <label for="prenom" class="form-label">Prénom</label>
+			  <input type="text" class="form-control" id="prenom" placeholder="Doe" pattern="[A-Za-z]{1,26}" required>
 			  <div class="valid-feedback">
 				Ok!
 			  </div>
 			</div>
 			<div class="col-md-4">
-			  <label for="validationCustomUsername" class="form-label">Adresse mail</label>
+			  <label for="adresseMail" class="form-label">Adresse mail</label>
 			  <div class="input-group has-validation">
 				<span class="input-group-text" id="inputGroupPrepend">@</span>
-				<input type="email" class="form-control" id="validationCustomUsername" placeholder="john.doe@mail.com" aria-describedby="inputGroupPrepend" required>
+				<input type="email" class="form-control" id="adresseMail" placeholder="john.doe@mail.com" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">
 				  Please choose a username.
 				</div>
 			  </div>
 			</div>
 			<div class="col-md-6">
-			  <label for="validationCustom03" class="form-label">Adresse</label>
-			  <input type="text" class="form-control" id="validationCustom03"pattern="[A-Za-z0-9 \.\-]{1,26}" placeholder="123 avenue des Ours" required>
+			  <label for="adresse" class="form-label">Adresse</label>
+			  <input type="text" class="form-control" id="adresse"pattern="[A-Za-z0-9 \.\-]{1,26}" placeholder="123 avenue des Ours" required>
 			  <div class="invalid-feedback">
 				Please provide a valid city.
 			  </div>
 			</div>
 			<div class="col-md-3">
-			  <label for="validationCustom05" class="form-label">Code postal</label>
-			  <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{5}" placeholder="98765" required>
+			  <label for="codePostal" class="form-label">Code postal</label>
+			  <input type="text" class="form-control" id="codePostal" pattern="[0-9]{5}" placeholder="98765" required>
 			  <div class="invalid-feedback">
 				Please provide a valid zip.
 			  </div>
@@ -103,7 +103,7 @@
 			  </div>
 			</div>
 			<div class="col-12">
-			  <button class="btn btn-primary" type="submit">Commander</button>
+			  <button onclick="commande()" class="btn btn-primary" type="submit">Commander</button>
 			</div>
 		  </form>
 		</div>
