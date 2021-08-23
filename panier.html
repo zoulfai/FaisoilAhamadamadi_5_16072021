@@ -10,7 +10,7 @@
 	 <!-- Bootstrap Bundle with Popper -->
 	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	 <!--Script javascript-->
-	 <script src="/javascript/panier.js"></script>
+	 <script src="./javascript/panier.js"></script>
     <title>Orinoco Panier</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -85,10 +85,10 @@
 			  </div>
 			</div>
 			<div class="col-md-3">
-			  <label for="codePostal" class="form-label">Code postal</label>
-			  <input type="text" class="form-control" id="codePostal" pattern="[0-9]{5}" placeholder="98765" required>
+			  <label for="codePostal" class="form-label">Ville</label>
+			  <input type="text" class="form-control" id="ville" pattern="[A-Za-z]{1,26}" placeholder="Villeours" required>
 			  <div class="invalid-feedback">
-				Please provide a valid zip.
+				Please provide a valid zip
 			  </div>
 			</div>
 			<div class="col-12">
@@ -103,7 +103,7 @@
 			  </div>
 			</div>
 			<div class="col-12">
-			  <button onclick="commande()" class="btn btn-primary" type="submit">Commander</button>
+			  <button onclick="commande();redirection()"  class="btn btn-primary" type="submit">Commander</button>
 			</div>
 		  </form>
 		</div>

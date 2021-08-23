@@ -43,7 +43,7 @@ const totalPrice = document.getElementById("total");
     const nom = document.getElementById("nom").value;
     const prenom = document.getElementById("prenom").value;
     const adresseMail = document.getElementById("adresseMail").value;
-    const codePostal = document.getElementById("codePostal").value;
+    const codePostal = document.getElementById("ville").value;
     const adresse = document.getElementById("adresse").value;
     alert (nom,prenom,adresseMail,codePostal,adresse);
     console.log(oursTableau);
@@ -64,23 +64,33 @@ const totalPrice = document.getElementById("total");
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify( {products:oursIds,contact:{
-          firstName : "",
-          lastName : "",
-          address : "",
-          city : "",
-          email : ""
-          
-        }})
+        body: JSON.stringify( {
+          products: oursIds,
+          contact:{
+            firstName : "aa",
+            lastName : "bb",
+            address : "cc",
+            city : "dd",
+            email : "ee@ff.gg"
+          }
+        })
       })
       console.log(result);
+      const content = await result.json();
+      console.log(content)
+      alert(content.orderId)
     }
-    catch(error){console.log(error)}
+    catch(error){
+      console.log(error)
+    }
 
    
 
 }
 
+function redirection(){
+  window.location.href='../confirmation.html';
+}
 
 window.addEventListener('load', async function() {
     await fetchText();
