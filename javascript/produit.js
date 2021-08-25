@@ -1,3 +1,4 @@
+//definition des elements
 async function fetchText() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);

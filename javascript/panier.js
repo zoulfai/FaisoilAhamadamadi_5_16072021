@@ -1,4 +1,5 @@
 var oursTableau = [];
+//afficher le panier
 async function fetchText(){
 
 
@@ -37,26 +38,17 @@ const totalPrice = document.getElementById("total");
 
 
 }
-
+// formulaire de commande
  async function commande(){
-    alert ("commande");
     const nom = document.getElementById("nom").value;
     const prenom = document.getElementById("prenom").value;
     const adresseMail = document.getElementById("adresseMail").value;
-    const codePostal = document.getElementById("ville").value;
+    const ville = document.getElementById("ville").value;
     const adresse = document.getElementById("adresse").value;
-    alert (nom,prenom,adresseMail,codePostal,adresse);
     console.log(oursTableau);
     let oursIds = oursTableau.map((ours)=>ours.id);
     console.log(oursIds);
-
-    /*let oursTmp = localStorage.getItem('ours');
-    console.log(oursTmp);
-    let oursObject = [];
-    if (oursTmp){
-      oursObject = JSON.parse(oursTmp);
-    }
-    console.log(oursObject);*/
+  
     try{
        
       let result = await fetch("http://localhost:3000/api/teddies/order", {
@@ -77,20 +69,38 @@ const totalPrice = document.getElementById("total");
       })
       console.log(result);
       const content = await result.json();
-      console.log(content)
-      alert(content.orderId)
+      console.log(content);
+      localStorage.setItem('order', JSON.stringify(content.orderId));
     }
     catch(error){
       console.log(error)
     }
-
+// validation formulaire
+    const testNom = /^[A-Za-z]{1,26}$/;
+    const testPrenom = /^[A-Za-z]{1,26}$/;
+    const testVille = /^[A-Za-z]{1,26}$/;
+    const testAdresse =  /^[A-Za-z0-9 \.\-]{1,26}$/;
+    const testAdresseMail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    const textBox = document.getElementById("invalidCheck");
+  
+    if (
+      (testNom.test(nom) == true) &
+      (testPrenom.test(prenom) == true) &
+      (testVille.test(ville) == true) &
+      (testAdresse.test(adresse) == true) &
+      (testAdresseMail.test(adresseMail) == true) &
+      (textBox.checked == true)
+   ){
+    window.location.href="../confirmation.html";
+   }else {
+    alert(
+        "Veuillez correctement remplir le formulaire pour valider votre commande."
+    );
+  }
+   
+  }
    
 
-}
-
-function redirection(){
-  window.location.href='../confirmation.html';
-}
 
 window.addEventListener('load', async function() {
     await fetchText();
