@@ -26,10 +26,6 @@ async function fetchText() {
   elem5.innerHTML = `<button onclick="stockage('${name}','${id}','${prix}','${img}')" class="btn btn-primary" type="button">Ajouter au panier</button>`;
   choixCouleur(ours);
 
-
-
-
-  
 }
 
 //fonction pour la liste des couleurs
@@ -67,11 +63,6 @@ function stockage(name, id, prix, img) {
   //stockTab.push(id, name, prix,img);
   localStorage.setItem('ours', JSON.stringify(oursObject));
   
-
-  
-
-
-
 }
 
 
