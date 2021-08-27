@@ -1,4 +1,18 @@
 var oursTableau = [];
+
+function calculPanier(oursObject){
+
+//conversion du prix
+let totalPanier = 0;
+
+oursObject.forEach((ours)=> {
+  let convertitPrix = 0;
+  convertitPrix = parseInt(ours.prix);
+  totalPanier = totalPanier+ convertitPrix;
+});
+return totalPanier;
+}
+
 //afficher le panier
 async function fetchText(){
 
@@ -18,11 +32,7 @@ async function fetchText(){
         <img src="${ours.img}" width="50" height="50" alt="ourson" class="d-inline-block align-text-top">${ours.name} ${ours.prix}$</p>`;
     }
 
-//conversion du prix
-   oursObject.forEach((ours)=> {
-    convertitPrix = parseInt(ours.prix);
-    totalPanier = totalPanier+ convertitPrix;
-});
+totalPanier = calculPanier(oursObject);
 //calcul total panier
 const totalPrice = document.getElementById("total");
   totalPrice.innerHTML += `${totalPanier} $`;
@@ -59,11 +69,11 @@ const totalPrice = document.getElementById("total");
         body: JSON.stringify( {
           products: oursIds,
           contact:{
-            firstName : "aa",
-            lastName : "bb",
-            address : "cc",
-            city : "dd",
-            email : "ee@ff.gg"
+            firstName : prenom,
+            lastName : nom,
+            address : adresse,
+            city : ville,
+            email : adresseMail,
           }
         })
       })

@@ -32,7 +32,7 @@ async function fetchText() {
 function choixCouleur(ours) {
   let couleurs = document.getElementById("choix");
   for (let couleur of ours.colors) {
-      couleurs.innerHTML += `<option selected value="${couleur}">${couleur}</option>`;
+    couleurs.innerHTML += `<option selected value="${couleur}">${couleur}</option>`;
   }
 }
 
@@ -47,27 +47,27 @@ function stockage(name, id, prix, img) {
   let oursTmp = localStorage.getItem('ours');
   console.log(oursTmp);
   let oursObject = [];
-  if (oursTmp){
+  if (oursTmp) {
     oursObject = JSON.parse(oursTmp);
 
   }
-  
+
   oursObject.push({
     name,
     id,
     prix,
     img,
   }
-    );
+  );
   alert(`A été ajouter ${name}`);
   //stockTab.push(id, name, prix,img);
   localStorage.setItem('ours', JSON.stringify(oursObject));
-  
+
 }
 
 
 
 
-window.addEventListener('load', async function() {
+window.addEventListener('load', async function () {
   await fetchText();
 });
