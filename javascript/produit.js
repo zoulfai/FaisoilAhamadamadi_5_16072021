@@ -1,5 +1,5 @@
-//definition des elements
-async function fetchText() {
+//affichage page produit
+async function afficheProduit() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const id = urlParams.get('id')
@@ -7,18 +7,14 @@ async function fetchText() {
   let ours = await response.json();
   let name = ours.name;
   let img = ours.imageUrl;
-
   let description = ours.description;
   let prix = ours.price;
   let elem0 = document.getElementById('oursName');
   elem0.innerHTML = `<h2 class="text-center">${name}</h2>`;
   let elem1 = document.getElementById('image');
   let elem2 = document.getElementById('descript');
-
   let elem4 = document.getElementById('prix');
   let elem5 = document.getElementById('btnPannier');
-
-
   //carte rempli
   elem1.innerHTML = ` <img src="${img}" class="card-img-top" alt="ourson">`;
   elem2.innerHTML = `<h5 class="card-title">${description}</h5>`;
@@ -37,15 +33,12 @@ function choixCouleur(ours) {
 }
 
 
-//fonction pour mettre dans le local storage
+//ajouts dans le local storage
 let stockTab = []
-
-
 
 function stockage(name, id, prix, img) {
 
   let oursTmp = localStorage.getItem('ours');
-  console.log(oursTmp);
   let oursObject = [];
   if (oursTmp) {
     oursObject = JSON.parse(oursTmp);
@@ -60,14 +53,13 @@ function stockage(name, id, prix, img) {
   }
   );
   alert(`A été ajouter ${name}`);
-  //stockTab.push(id, name, prix,img);
+
   localStorage.setItem('ours', JSON.stringify(oursObject));
 
 }
 
 
-
-
+//chargement
 window.addEventListener('load', async function () {
-  await fetchText();
+  await afficheProduit();
 });
