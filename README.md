@@ -36,9 +36,9 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants sur votre
 - Node.js (v14 ou plus récent)
 - npm (généralement inclus avec Node.js)
 
-Installation du projet
+## Installation du projet
 
-1. Clonez le dépôt GitHub :
+1. **Clonez le dépôt GitHub** :
 
    Ouvrez un terminal et exécutez la commande suivante pour cloner le projet sur votre machine locale :
 
@@ -46,13 +46,13 @@ Installation du projet
 
    Remplacez nom-utilisateur et nom-repo par les noms corrects de votre dépôt.
 
-2. Accédez au répertoire du projet :
+2. **Accédez au répertoire du projet** :
 
    Déplacez-vous dans le dossier du projet cloné avec la commande :
 
    cd nom-repo
 
-3. Installez les dépendances :
+3. **Installez les dépendances** :
 
    Une fois dans le répertoire du projet, exécutez la commande suivante pour installer toutes les dépendances nécessaires :
 
@@ -62,62 +62,16 @@ Installation du projet
 
 Démarrage du serveur
 
-1. Lancez le serveur :
+1. **Lancez le serveur** :
 
    Après l'installation des dépendances, lancez le serveur avec la commande suivante :
 
    npm start
 
-2. Accédez à l'application :
+2. **Accédez à l'application** :
 
    Une fois le serveur démarré, ouvrez votre navigateur et rendez-vous à l'adresse suivante pour voir l'application :
 
    http://localhost:3000/index.html
 
    Vous devriez voir la page d'accueil de l'application Orinoco.
-
-Structure du projet
-
-Voici un aperçu rapide de la structure du projet :
-
-/controllers   # Contient les fichiers de logique métier
-/images        # Contient les images statiques utilisées dans l'application
-/javascript    # Contient les fichiers JavaScript côté client
-/models        # Contient les modèles de données
-/routes        # Contient les fichiers de routage de l'API
-/node_modules  # Contient les modules installés par npm
-app.js         # Configuration de l'application Express
-index.html     # Page d'accueil principale de l'application
-server.js      # Fichier principal du serveur Node.js
-package.json   # Fichier de configuration du projet
-
-API
-
-Le projet comporte plusieurs routes pour les différentes entités (caméras, peluches, meubles). Voici les points d'accès de l'API :
-
-- Caméras : http://localhost:3000/api/cameras
-- Peluche (Teddies) : http://localhost:3000/api/teddies
-- Meubles : http://localhost:3000/api/furniture
-
-Vous pouvez interagir avec ces routes en utilisant des outils comme Postman ou cURL.
-
-Déploiement sur GitHub
-
-Si vous souhaitez partager ce projet, vous pouvez déployer le code sur GitHub et rendre votre dépôt public ou privé. Voici les étapes pour ajouter des changements :
-
-1. Ajoutez les changements :
-
-   git add .
-
-2. Committez les changements :
-
-   git commit -m "Description des modifications"
-
-3. Poussez les changements vers GitHub :
-
-   git push origin main
-
-Problèmes connus
-
-- Assurez-vous que le port 3000 n'est pas utilisé par une autre application avant de démarrer le serveur.
-- Si des erreurs 404 apparaissent, vérifiez que tous les fichiers statiques sont dans les bons répertoires.
