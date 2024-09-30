@@ -26,13 +26,10 @@ Orinoco est une entreprise de commerce en ligne cherchant à se démarquer des g
 
 ## Ressources supplémentaires
 - [MDN - localStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
-- [Validator W3C HTML](https://validator.w3.org)
-- [Validator W3C CSS](https://jigsaw.w3.org/css-validator)
 
+# Guide d'installation et de démarrage
 
-Orinoco - Guide d'installation et de démarrage
-
-Prérequis
+## Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé les outils suivants sur votre machine :
 
