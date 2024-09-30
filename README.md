@@ -1,58 +1,30 @@
-Scénario
-Félicitations ! Vous avez été recruté en tant que développeur front-end par Orinoco, une entreprise de commerce en ligne. 
+# Projet : Développement du Front-end pour Orinoco
 
- 
+## Description
+Orinoco est une entreprise de commerce en ligne cherchant à se démarquer des géants comme Amazon en créant des applications thématiques spécialisées. Ce projet consiste à développer un MVP (Minimum Viable Product) pour présenter une de ces applications à des investisseurs. En tant que développeur front-end, vous êtes chargé de l'interface utilisateur tandis que Jeanne s'occupe du back-end.
 
-Le logo d'Orinoco
-Le logo d'Orinoco
-Son credo ? Se démarquer des grands site e-commerce comme Amazon en créant des applications thématiques ne vendant qu’un seul groupe de produits. Il y a par exemple Oribook pour les livres ou Oritextil pour les vêtements.
+## Équipe projet
+- **Paul** : Fondateur de Orinoco, initiateur du projet.
+- **Jeanne** : Développeuse back-end, responsable de l'intégration des API.
+- **Moi** : Développeur front-end, en charge du développement de l'interface utilisateur et des interactions.
 
-Vos compétences en développement web et votre personnalité ont plu à Paul, le fondateur de l’entreprise.
+## Fonctionnalités Principales
+- **Page produit** : Présentation des produits avec utilisation des paramètres de requête de l'URL pour afficher les détails.
+- **Panier d’achat** : Gestion du panier à l'aide de `localStorage` pour sauvegarder les articles sélectionnés.
+- **Interface responsive** : Conception d'une interface fluide et adaptée à toutes les tailles d'écran.
+- **Plan de tests** : Mise en place d'un plan de tests pour garantir le bon fonctionnement des différentes fonctionnalités du site.
 
-Dans un premier temps, Paul souhaite créer un premier MVP pour démontrer le fonctionnement de ses applications à ses investisseurs.
+## Contraintes Techniques
+- **LocalStorage** : Utilisation de `localStorage` pour conserver les articles ajoutés au panier entre les sessions.
+- **Paramètres de requête URL** : Gestion des paramètres de l'URL pour afficher les informations sur la page produit.
 
-L’équipe est constituée de Jeanne, développeuse back-end travaillant sur les API et vous, pour la partie front-end.
+## Recommandations de Développement
+- **Éditeur recommandé** : Visual Studio Code avec extensions comme Live Server et Prettier pour faciliter le développement.
+- **Technologies utilisées** : JavaScript pour la gestion du panier et l’affichage des produits, HTML/CSS pour la structure et le style.
+- **Plan de tests** : Un plan de tests complet sera fourni pour s'assurer que les fonctionnalités principales fonctionnent correctement.
+- **Versionnage** : Utilisation de Git pour le suivi des versions avec un dépôt GitHub pour une meilleure collaboration.
 
-À votre arrivée, vous trouvez un mail de Paul dans votre boîte mail.
-
- 
-
-De: Paul 
-
-À: vous
-
------------------------------------------------------------------------------------
-
-Objet : Bienvenue !
-
-Bonjour et bienvenue chez Orinoco ! J’espère que tu te plairas parmi nous. J’ai vraiment hâte de montrer ce MVP aux investisseurs. Il faut qu’on les rassure car ils misent sur nous. :)
-Jeanne s’occupera du back-end et toi du front.
-
-Avec l’équipe, on a déjà pas mal bossé sur le cahier du MVP. Cela te fera une bonne base pour avancer. Tu trouveras en pièce jointe les spécifications.
-
-N'hésite pas à venir me voir si tu as la moindre question, ma porte est toujours ouverte.
-
-Paul
-
-Fondateur de Orinoco
-
-
-Spécifications Orinoco
-
- Paul vous envoie également des messages sur le système de messagerie instantanée de l’entreprise pour vous apporter quelques précisions complémentaires.
-
- 
-
-Paul > Hello, comme je sais que tu débutes, voici quelques informations qui pourront t’aider pour réaliser le front de l’application. TU vas avoir besoin de deux fonctionnalités JavaScript pour mener à bien ta missions. localStorage pour le panier et les paramètres de requête de l’URL pour la page « produit ».
-
-Moi > Super, merci !
-
-Paul > Je souhaiterais également que tu réalises un plan de tests pour montrer comment l’application devrait être testée.
-
-Moi > Est-ce que tu souhaites un format particulier pour le plan de tests ?
-
-Paul > Je te laisse libre choix pour le format du plan de tests.
-
-Moi > Ok ! C’est parti alors !
-La conversation instantanée entre Paul et vous
-Vous gardez en tête toutes ces informations et attaquez le développement immédiatement.
+## Ressources supplémentaires
+- [MDN - localStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
+- [Validator W3C HTML](https://validator.w3.org)
+- [Validator W3C CSS](https://jigsaw.w3.org/css-validator)
